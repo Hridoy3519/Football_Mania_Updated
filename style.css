@@ -6,6 +6,17 @@ body{
     font-family: 'Poppins', sans-serif;
 }
 
+/* Hide scrollbar for Chrome, Safari and Opera */
+.example::-webkit-scrollbar {
+    display: none;
+  }
+  
+  /* Hide scrollbar for IE, Edge and Firefox */
+  .example {
+    -ms-overflow-style: none;  /* IE and Edge */
+    scrollbar-width: none;  /* Firefox */
+  }
+
 /* Header Styles */
 
 header{
@@ -179,6 +190,66 @@ header{
     box-shadow: 2px 2px 5px #433bb4;
 }
 
+/* Fixtures */
+
+.fixture{
+    display: flex;
+    border-top: 1px solid lightgray;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.teams{
+    width: 60%;
+    display: flex;
+}
+
+.fixture:hover{
+    background-color: #433bb4;
+    color: white;
+    transition: height 1s, background-color 1s;
+}
+
+.first-side
+{
+    display: grid;
+    grid-template-columns: 130px 50px 130px;
+    justify-items: end;
+    align-items: center;
+
+}
+
+.second-side
+{
+    display: grid;
+    margin-left: 50px;
+    grid-template-columns: 50px 130px;
+    justify-items: start;
+    align-items: center;
+
+}
+
+.time{
+    padding: 10px;
+    border: 1px solid lightgray;
+}
+
+.place{
+    width: 35%;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.stadium{
+    font-size: 16px;
+    margin-left: 10px;
+}
+
+.fa-globe-europe{
+    font-size: 16px;
+}
+
 /* Footer */
 
 footer{
@@ -244,7 +315,7 @@ small{
         width: 100%;
     }
 
-    /* news and match fixtures */
+    /* News */
 
     .container{
         width: 90%;
@@ -260,6 +331,7 @@ small{
         text-align: center;
     }
 
+    /* Highlight */
     .matches{
         grid-template-columns: repeat(1,1fr);
         grid-row-gap: 27px;
@@ -275,6 +347,44 @@ small{
         width: 100%;
     }
 
+    /* Fixtures */
+    .place{
+        display: none;
+    }
+
+    .teams{
+        display: flex;
+        flex-direction: column;
+    }
+
+    .fixture{
+        display: flex;
+        flex-direction: column;
+    }
+    .first-side,.second-side
+    {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .second-side{
+        margin: 0;
+    }
+
+    .first-side h4,.second-side h4
+    {
+        margin: 0;
+    }
+    .match-details{
+        margin: 10px 0;
+    }
+
+    .fixture:hover{
+        background-color: #433bb4;
+        border-radius: 10px;
+        color: white;
+        transition: height 1s, background-color 1s, border-radius 1s;
+    }
     /* Footer */
 
     footer{
